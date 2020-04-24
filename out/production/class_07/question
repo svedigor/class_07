@@ -12,3 +12,16 @@
         youtube -2
         Why?
 
+        challenge_N:
+        how to check that page is loaded/ document.Ready
+        before getting page sopurce ?
+
+        challenge_N
+        1. after document.readysatatus == complete
+        if wait more then 5sec(but it may to deppend on internet speed)
+        length of source is less, the before wait why?
+        2. every load of page source.length is difference
+        why?
+
+
+
