@@ -1,0 +1,14 @@
+
+        challenge_O:
+
+        the order in oppening tabs is:
+        google
+        youtube
+        google translate
+
+        the indexes created by getWindowHandles() are:
+        google - 0
+        google translate - 1
+        youtube -2
+        Why?
+
