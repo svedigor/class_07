@@ -29,9 +29,9 @@ public class Tests_J_M extends ParentForTests {
 
     @Test
     public void test1_LogIN() throws InterruptedException {
-        driverFirefox.findElement(By.xpath("//input[@id='identifierId']")).sendKeys("mail" + Keys.ENTER);
+        driverFirefox.findElement(By.xpath("//input[@id='identifierId']")).sendKeys("sved.igor@gmail.com" + Keys.ENTER);
         WebElement password = driverFirefox.findElement(By.xpath("//input[@name='password']"));
-        sendKeyToUnvisible(driverFirefox, password, 10, "password");
+        sendKeyToUnvisible(driverFirefox, password, 10, "Igor326849775");
     }
 
     @Test

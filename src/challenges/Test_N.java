@@ -10,7 +10,7 @@ public class Test_N extends ParentForTests {
 
     private static String source;
     private final static String stringToFind = "news";
-    protected int count;
+    private int count;
 
     @BeforeClass
     public static void setDriver() {
@@ -27,10 +27,13 @@ public class Test_N extends ParentForTests {
         //get source after document dom is loaded
         driverChrome.get("https://themarker.com");
         JavascriptExecutor js = (JavascriptExecutor) driverChrome;
-        source = documentReadyComplete(driverChrome,js);
+       // source = documentReadyComplete(driverChrome,js);
+        documentReadyComplete(driverChrome,js);
         // count "news" accurances on page
-        count = findOccurance(source, stringToFind);
-        out.println("the length of page source string  = "+source.length());
-        out.println("World news exists on page - "+count+" times");
+
+
+//        count = findOccurance(source, stringToFind);
+//        out.println("the length of page source string  = "+source.length());
+//        out.println("World news exists on page - "+count+" times");
     }
 }

@@ -1,14 +1,9 @@
 package challenges;
 
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
-
 import java.util.ArrayList;
-import java.util.jar.JarException;
-
-import static java.lang.System.out;
 
 public class Test_O extends ParentForTests{
 
@@ -18,7 +13,6 @@ public class Test_O extends ParentForTests{
     }
 
     @Test
-    //Question:
     public void test_O() throws InterruptedException {
         ArrayList<String> myTabs;
         JavascriptExecutor js = (JavascriptExecutor)driverChrome;

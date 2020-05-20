@@ -1,6 +1,5 @@
 package challenges;
 
-import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,10 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-
 import static java.lang.System.out;
 
 public class ParentForTests {
@@ -31,7 +28,8 @@ public class ParentForTests {
     }
 
     protected static void setChromeDriver() {
-        System.setProperty("webdriver.chrome.driver", "/Users/igor_shved/Documents/Java/libraries/webDrivers/chromedriver");
+        System.setProperty("webdriver.chr" +
+                "ome.driver", "/Users/igor_shved/Documents/Java/libraries/webDrivers/chromedriver");
         ChromeOptions options = new ChromeOptions();
         // Tets_L  - disable extensions for Chrome
         options.addArguments("--disable-extensions");
@@ -55,11 +53,14 @@ public class ParentForTests {
         }
     }
 
-    protected static String documentReadyComplete(WebDriver driver,JavascriptExecutor js) throws InterruptedException {
+    protected static void documentReadyComplete(WebDriver driver,JavascriptExecutor js) throws InterruptedException {
         while (!js.executeScript("return document.readyState").toString().equals("complete")){
-            Thread.sleep(1000);
+            out.println(js.executeScript("return document.readyState").toString());
+            out.println(driver.getPageSource().length());
+//            Thread.sleep(100);
         }
-            return driver.getPageSource();
+            out.println(js.executeScript("return document.readyState").toString());
+            out.println(driver.getPageSource().length());
     }
 
     protected static int findOccurance(String source, String stringToFind) throws InterruptedException {

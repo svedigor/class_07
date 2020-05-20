@@ -17,11 +17,11 @@ import static java.lang.System.out;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 public class Class_07 {
-    static WebDriver driverChrome, driverFirefox;
+    private static WebDriver driverChrome, driverFirefox;
 
-    final String expectedTitleAmazon = "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more";
-    final String myName = "Mayer";
-    final String expectedIfConfirmed = "Confirmed";
+    private static final String expectedTitleAmazon = "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more";
+    private static final String myName = "Mayer";
+    private static final String expectedIfConfirmed = "Confirmed";
 
     @BeforeClass
     public static void setDriver() {
@@ -42,6 +42,7 @@ public class Class_07 {
     public static void quitDriver() {
         out.println("@AfterClass");
         driverChrome.quit();
+        driverFirefox.quit();
     }
 
     @Before
